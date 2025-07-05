@@ -119,9 +119,7 @@ const Security = () => {
           </Typography>
           
           <List sx={{ mb: 4 }}>
-            <ListItem>
-              <ListItemText primary="AWS-based infrastructure with enterprise security features" />
-            </ListItem>
+
             <ListItem>
               <ListItemText primary="Distributed denial-of-service (DDoS) protection" />
             </ListItem>
