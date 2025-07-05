@@ -81,7 +81,7 @@ const Blog = () => {
       date: 'December 2024',
       icon: <SecurityIcon sx={{ fontSize: 24, color: '#112a48' }} />,
       keywords: 'privacy-safe analytics, machine learning analytics, agentic AI, behavioral prediction, zero PII collection, privacy compliance',
-      route: null
+      route: '/blog/future-privacy-safe-analytics'
     },
     {
       title: 'Enterprise Analytics Migration: From Traditional to Privacy-Safe Solutions',
@@ -91,7 +91,7 @@ const Blog = () => {
       date: 'December 2024',
       icon: <ArticleIcon sx={{ fontSize: 24, color: '#112a48' }} />,
       keywords: 'enterprise analytics migration, privacy-safe analytics, analytics platform transition, compliance migration, enterprise privacy strategy',
-      route: null
+      route: '/blog/enterprise-analytics-migration'
     },
     {
       title: 'Real-Time Behavioral Segmentation: Advanced ML Pipeline Architecture',
@@ -101,7 +101,7 @@ const Blog = () => {
       date: 'November 2024',
       icon: <TrendingIcon sx={{ fontSize: 24, color: '#112a48' }} />,
       keywords: 'real-time segmentation, ML pipeline architecture, behavioral segmentation, real-time analytics, machine learning infrastructure',
-      route: null
+      route: '/blog/real-time-behavioral-segmentation'
     },
     {
       title: 'Cross-Platform Analytics: Unified Behavioral Intelligence Across Surfaces',
@@ -111,7 +111,7 @@ const Blog = () => {
       date: 'November 2024',
       icon: <PsychologyIcon sx={{ fontSize: 24, color: '#112a48' }} />,
       keywords: 'cross-platform analytics, unified behavioral intelligence, multi-surface tracking, mobile analytics, web analytics, digital billboard analytics',
-      route: null
+      route: '/blog/cross-platform-analytics'
     }
   ];
 

@@ -13,6 +13,10 @@ import Blog from './pages/Blog';
 import PreparingForPostCookieWorld from './pages/blog/PreparingForPostCookieWorld';
 import UserBehaviorProfilesVsIdTracking from './pages/blog/UserBehaviorProfilesVsIdTracking';
 import DOOHOpportunities from './pages/blog/DOOHOpportunities';
+import FuturePrivacySafeAnalytics from './pages/blog/FuturePrivacySafeAnalytics';
+import EnterpriseAnalyticsMigration from './pages/blog/EnterpriseAnalyticsMigration';
+import RealTimeBehavioralSegmentation from './pages/blog/RealTimeBehavioralSegmentation';
+import CrossPlatformAnalytics from './pages/blog/CrossPlatformAnalytics';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
           <Route path="/blog/preparing-for-post-cookie-world" element={<PreparingForPostCookieWorld />} />
           <Route path="/blog/user-behavior-profiles-vs-id-tracking" element={<UserBehaviorProfilesVsIdTracking />} />
           <Route path="/blog/dooh-opportunities" element={<DOOHOpportunities />} />
+          <Route path="/blog/future-privacy-safe-analytics" element={<FuturePrivacySafeAnalytics />} />
+          <Route path="/blog/enterprise-analytics-migration" element={<EnterpriseAnalyticsMigration />} />
+          <Route path="/blog/real-time-behavioral-segmentation" element={<RealTimeBehavioralSegmentation />} />
+          <Route path="/blog/cross-platform-analytics" element={<CrossPlatformAnalytics />} />
         </Routes>
       </Box>
       <Footer />
