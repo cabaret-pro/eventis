@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://eventistechnologies.com/sitemap.xml
+
+# Crawl delay (optional - reduces server load)
+Crawl-delay: 1
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TwitterBot
+Allow: /
+
+# Block access to certain file types (optional)
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /static/ 

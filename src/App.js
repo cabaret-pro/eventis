@@ -10,6 +10,9 @@ import Security from './pages/Security';
 import AboutUs from './pages/AboutUs';
 import Careers from './pages/Careers';
 import Blog from './pages/Blog';
+import PreparingForPostCookieWorld from './pages/blog/PreparingForPostCookieWorld';
+import UserBehaviorProfilesVsIdTracking from './pages/blog/UserBehaviorProfilesVsIdTracking';
+import DOOHOpportunities from './pages/blog/DOOHOpportunities';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/preparing-for-post-cookie-world" element={<PreparingForPostCookieWorld />} />
+          <Route path="/blog/user-behavior-profiles-vs-id-tracking" element={<UserBehaviorProfilesVsIdTracking />} />
+          <Route path="/blog/dooh-opportunities" element={<DOOHOpportunities />} />
         </Routes>
       </Box>
       <Footer />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Paper, Grid, Card, CardContent, CardMedia, Button, Chip } from '@mui/material';
 import { styled } from '@mui/system';
+import { Link } from 'react-router-dom';
 import { Article as ArticleIcon, TrendingUp as TrendingIcon, Psychology as PsychologyIcon, Security as SecurityIcon } from '@mui/icons-material';
 
 const PageContainer = styled(Box)(() => ({
@@ -42,66 +43,79 @@ const FeaturedCard = styled(Card)(() => ({
 
 const Blog = () => {
   const featuredPost = {
-    title: 'The Future of Privacy-Safe Analytics: How ML + Agentic AI is Revolutionizing User Understanding',
-    excerpt: 'Discover how our breakthrough approach to behavioral analytics delivers unprecedented insights while maintaining complete user privacy.',
-    category: 'Technology',
-    readTime: '8 min read',
-    date: 'December 2024',
-    image: '/api/placeholder/600/300'
+    title: 'Preparing for the Post-Cookie and PII Tracking World: A Strategic Guide for Modern Businesses',
+    excerpt: 'As third-party cookies phase out and PII tracking faces increasing restrictions, discover how behavioral analytics offers a privacy-safe alternative that delivers superior insights. Learn the strategies top companies are using to future-proof their analytics stack.',
+    category: 'Privacy Strategy',
+    readTime: '12 min read',
+    date: 'January 2025',
+    image: '/api/placeholder/600/300',
+    keywords: 'post-cookie analytics, PII tracking alternatives, privacy-safe analytics, behavioral intelligence, third-party cookies, GDPR compliance'
   };
 
   const blogPosts = [
     {
-      title: 'Beyond Traditional Analytics: The Rise of Behavioral Intelligence',
-      excerpt: 'Traditional analytics platforms are failing businesses and users alike. Here\'s how behavioral intelligence changes everything.',
-      category: 'Analytics',
-      readTime: '5 min read',
-      date: 'November 2024',
-      icon: <TrendingIcon sx={{ fontSize: 24, color: '#112a48' }} />
+      title: 'What Are User Behavior Profiles and How Are They Better Than ID Tracking?',
+      excerpt: 'Discover why user behavior profiles represent the future of digital analytics. Unlike traditional ID tracking, behavioral profiles capture intent patterns without compromising privacy, delivering 40% better conversion rates and complete GDPR compliance.',
+      category: 'Behavioral Analytics',
+      readTime: '10 min read',
+      date: 'January 2025',
+      icon: <PsychologyIcon sx={{ fontSize: 24, color: '#112a48' }} />,
+      keywords: 'user behavior profiles, behavioral analytics, ID tracking alternatives, privacy-safe tracking, behavioral intelligence, user intent modeling',
+      route: '/blog/user-behavior-profiles-vs-id-tracking'
     },
     {
-      title: 'Privacy by Design: Building Trust in the Age of Data',
-      excerpt: 'Why privacy-by-design isn\'t just a compliance requirement—it\'s a competitive advantage that builds lasting customer trust.',
-      category: 'Privacy',
-      readTime: '6 min read',
-      date: 'November 2024',
-      icon: <SecurityIcon sx={{ fontSize: 24, color: '#112a48' }} />
-    },
-    {
-      title: 'Crowd Analysis and Dynamic Pricing: The AI Revolution in Digital Advertising',
-      excerpt: 'How real-time crowd behavior analysis is transforming digital billboard advertising with AI-powered dynamic pricing.',
-      category: 'AI',
-      readTime: '7 min read',
-      date: 'October 2024',
-      icon: <PsychologyIcon sx={{ fontSize: 24, color: '#112a48' }} />
-    },
-    {
-      title: 'GDPR, CCPA, and Beyond: Navigating the Global Privacy Landscape',
-      excerpt: 'A comprehensive guide to privacy regulations and how businesses can stay compliant while leveraging user data.',
-      category: 'Compliance',
-      readTime: '9 min read',
-      date: 'October 2024',
-      icon: <SecurityIcon sx={{ fontSize: 24, color: '#112a48' }} />
-    },
-    {
-      title: 'Seasonality Intelligence: Predicting User Behavior Across Time',
-      excerpt: 'How advanced temporal pattern recognition helps businesses anticipate and respond to seasonal behavior changes.',
-      category: 'Technology',
-      readTime: '6 min read',
-      date: 'September 2024',
-      icon: <TrendingIcon sx={{ fontSize: 24, color: '#112a48' }} />
-    },
-    {
-      title: 'The ROI of Privacy-Safe Analytics: Why Businesses Are Making the Switch',
-      excerpt: 'Real-world case studies showing how privacy-first analytics delivers better results than traditional tracking.',
-      category: 'Business',
+      title: 'DOOH Opportunities for Optimized Analytics: Transforming Digital Billboard ROI',
+      excerpt: 'Digital Out-of-Home (DOOH) advertising is experiencing a revolution through real-time behavioral analytics. Learn how location-based behavioral insights, crowd analysis, and dynamic pricing are delivering 3x better ad relevance and proven CPM uplift.',
+      category: 'DOOH Analytics',
       readTime: '8 min read',
-      date: 'September 2024',
-      icon: <ArticleIcon sx={{ fontSize: 24, color: '#112a48' }} />
+      date: 'January 2025',
+      icon: <TrendingIcon sx={{ fontSize: 24, color: '#112a48' }} />,
+      keywords: 'DOOH analytics, digital billboard optimization, location-based analytics, crowd behavior analysis, dynamic pricing, digital out-of-home advertising',
+      route: '/blog/dooh-opportunities'
+    },
+    {
+      title: 'The Future of Privacy-Safe Analytics: ML + Agentic AI Revolution',
+      excerpt: 'How machine learning and agentic AI are creating a new paradigm in behavioral analytics. Achieve 97% accuracy in behavioral prediction while maintaining zero PII collection and complete privacy compliance.',
+      category: 'AI Technology',
+      readTime: '9 min read',
+      date: 'December 2024',
+      icon: <SecurityIcon sx={{ fontSize: 24, color: '#112a48' }} />,
+      keywords: 'privacy-safe analytics, machine learning analytics, agentic AI, behavioral prediction, zero PII collection, privacy compliance',
+      route: null
+    },
+    {
+      title: 'Enterprise Analytics Migration: From Traditional to Privacy-Safe Solutions',
+      excerpt: 'A comprehensive guide for enterprises transitioning from traditional analytics platforms to privacy-safe alternatives. Includes migration strategies, compliance considerations, and ROI optimization techniques.',
+      category: 'Enterprise Strategy',
+      readTime: '11 min read',
+      date: 'December 2024',
+      icon: <ArticleIcon sx={{ fontSize: 24, color: '#112a48' }} />,
+      keywords: 'enterprise analytics migration, privacy-safe analytics, analytics platform transition, compliance migration, enterprise privacy strategy',
+      route: null
+    },
+    {
+      title: 'Real-Time Behavioral Segmentation: Advanced ML Pipeline Architecture',
+      excerpt: 'Deep dive into the technical architecture powering real-time behavioral segmentation. Learn how advanced ML pipelines process millions of events with &lt;50ms latency while maintaining privacy compliance.',
+      category: 'Technical Architecture',
+      readTime: '13 min read',
+      date: 'November 2024',
+      icon: <TrendingIcon sx={{ fontSize: 24, color: '#112a48' }} />,
+      keywords: 'real-time segmentation, ML pipeline architecture, behavioral segmentation, real-time analytics, machine learning infrastructure',
+      route: null
+    },
+    {
+      title: 'Cross-Platform Analytics: Unified Behavioral Intelligence Across Surfaces',
+      excerpt: 'How to achieve unified behavioral intelligence across mobile apps, websites, and digital billboards. Explore cross-platform tracking strategies that respect user privacy while delivering comprehensive insights.',
+      category: 'Cross-Platform',
+      readTime: '7 min read',
+      date: 'November 2024',
+      icon: <PsychologyIcon sx={{ fontSize: 24, color: '#112a48' }} />,
+      keywords: 'cross-platform analytics, unified behavioral intelligence, multi-surface tracking, mobile analytics, web analytics, digital billboard analytics',
+      route: null
     }
   ];
 
-  const categories = ['All', 'Technology', 'Privacy', 'Analytics', 'AI', 'Business', 'Compliance'];
+  const categories = ['All', 'Privacy Strategy', 'Behavioral Analytics', 'DOOH Analytics', 'AI Technology', 'Enterprise Strategy', 'Technical Architecture', 'Cross-Platform'];
 
   return (
     <PageContainer>
@@ -158,8 +172,9 @@ const Blog = () => {
                   </Typography>
                   
                   <Button
+                    component={Link}
+                    to="/blog/preparing-for-post-cookie-world"
                     variant="contained"
-                    href="mailto:team@oncabaret.com?subject=Blog Article Request"
                     sx={{
                       backgroundColor: '#112a48',
                       alignSelf: 'flex-start',
@@ -232,20 +247,35 @@ const Blog = () => {
                       {post.excerpt}
                     </Typography>
                     
-                    <Button
-                      variant="outlined"
-                      href="mailto:team@oncabaret.com?subject=Blog Article Request"
-                      sx={{
-                        borderColor: '#112a48',
-                        color: '#112a48',
-                        '&:hover': {
-                          backgroundColor: '#112a48',
-                          color: 'white'
-                        }
-                      }}
-                    >
-                      Read More
-                    </Button>
+                    {post.route ? (
+                      <Button
+                        component={Link}
+                        to={post.route}
+                        variant="outlined"
+                        sx={{
+                          borderColor: '#112a48',
+                          color: '#112a48',
+                          '&:hover': {
+                            backgroundColor: '#112a48',
+                            color: 'white'
+                          }
+                        }}
+                      >
+                        Read More
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="outlined"
+                        disabled
+                        sx={{
+                          borderColor: '#ccc',
+                          color: '#999',
+                          cursor: 'not-allowed'
+                        }}
+                      >
+                        Coming Soon
+                      </Button>
+                    )}
                   </CardContent>
                 </BlogCard>
               </Grid>
