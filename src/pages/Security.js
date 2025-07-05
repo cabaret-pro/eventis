@@ -41,8 +41,8 @@ const Security = () => {
       icon: <ShieldIcon sx={{ fontSize: 48, color: '#112a48' }} />
     },
     {
-      title: 'SOC 2 Compliance',
-      description: 'Independently audited and certified for security best practices',
+      title: 'SOC 2 Compliance Target',
+      description: 'Working toward SOC 2 certification with industry security best practices',
       icon: <VerifiedIcon sx={{ fontSize: 48, color: '#112a48' }} />
     },
     {
@@ -152,7 +152,7 @@ const Security = () => {
               <ListItemText primary="CCPA (California Consumer Privacy Act) compliant" />
             </ListItem>
             <ListItem>
-              <ListItemText primary="SOC 2 Type II certified" />
+              <ListItemText primary="Targeting SOC 2 Type II certification" />
             </ListItem>
             <ListItem>
               <ListItemText primary="ISO 27001 security management standards" />
