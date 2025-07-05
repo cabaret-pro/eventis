@@ -113,9 +113,9 @@ const Footer = () => {
               <FooterLink href="https://github.com/oncabteam/anon" target="_blank">
                 API Reference
               </FooterLink>
-              <FooterLink href="#privacy">Privacy Policy</FooterLink>
-              <FooterLink href="#terms">Terms of Service</FooterLink>
-              <FooterLink href="#security">Security</FooterLink>
+              <FooterLink href="/privacy">Privacy Policy</FooterLink>
+              <FooterLink href="/terms">Terms of Service</FooterLink>
+              <FooterLink href="/security">Security</FooterLink>
             </Box>
           </Grid>
 
@@ -125,11 +125,11 @@ const Footer = () => {
               Company
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <FooterLink href="#about">About Us</FooterLink>
-              <FooterLink href="#careers">Careers</FooterLink>
-              <FooterLink href="#blog">Blog</FooterLink>
-              <FooterLink href="mailto:hello@eventis.tech">Contact</FooterLink>
-              <FooterLink href="mailto:press@eventis.tech">Press</FooterLink>
+              <FooterLink href="/about">About Us</FooterLink>
+              <FooterLink href="/careers">Careers</FooterLink>
+              <FooterLink href="/blog">Blog</FooterLink>
+              <FooterLink href="mailto:team@oncabaret.com">Contact</FooterLink>
+              <FooterLink href="mailto:team@oncabaret.com">Press</FooterLink>
             </Box>
           </Grid>
 
@@ -194,10 +194,10 @@ const Footer = () => {
           </Typography>
           
           <Box sx={{ display: 'flex', gap: 3, flexWrap: 'wrap' }}>
-            <FooterLink href="#privacy">Privacy Policy</FooterLink>
-            <FooterLink href="#terms">Terms of Service</FooterLink>
-            <FooterLink href="#security">Security</FooterLink>
-            <FooterLink href="#compliance">Compliance</FooterLink>
+            <FooterLink href="/privacy">Privacy Policy</FooterLink>
+            <FooterLink href="/terms">Terms of Service</FooterLink>
+            <FooterLink href="/security">Security</FooterLink>
+            <FooterLink href="/security">Compliance</FooterLink>
           </Box>
         </Box>
 
