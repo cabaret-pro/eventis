@@ -38,28 +38,12 @@ const BenefitCard = styled(Card)(() => ({
 const Careers = () => {
   const openPositions = [
     {
-      title: 'Senior AI/ML Engineer',
-      department: 'Engineering',
-      location: 'NYC / Remote',
-      type: 'Full-time',
-      description: 'Lead the development of our ML + agentic AI behavioral analytics platform',
-      requirements: ['5+ years ML/AI experience', 'Python/TensorFlow expertise', 'Privacy-preserving ML knowledge']
-    },
-    {
       title: 'Privacy Engineer',
       department: 'Engineering',
       location: 'NYC / Remote',
       type: 'Full-time',
       description: 'Ensure our privacy-first architecture meets the highest standards',
       requirements: ['Privacy engineering experience', 'GDPR/CCPA expertise', 'Cryptography knowledge']
-    },
-    {
-      title: 'Frontend Developer',
-      department: 'Engineering',
-      location: 'NYC / Remote',
-      type: 'Full-time',
-      description: 'Build beautiful, intuitive interfaces for our analytics platform',
-      requirements: ['React/TypeScript expert', '3+ years experience', 'Design system experience']
     },
     {
       title: 'Sales Engineer',
@@ -103,7 +87,7 @@ const Careers = () => {
           </Typography>
           
           <Typography variant="h5" sx={{ mb: 8, color: '#6c757d', textAlign: 'center', maxWidth: '800px', margin: '0 auto 64px auto' }}>
-            Help us build the future of privacy-safe behavioral analytics. Work with cutting-edge AI technology while making a positive impact on user privacy.
+            Join our mission to build privacy-safe behavioral analytics infrastructure. We're looking for privacy experts and sales engineers who share our vision of analytics that respects user privacy.
           </Typography>
 
           <Typography variant="h4" sx={{ fontWeight: 600, mb: 3, color: '#112a48' }}>
@@ -112,8 +96,8 @@ const Careers = () => {
           
           <Typography variant="body1" sx={{ mb: 6, lineHeight: 1.6, fontSize: '18px' }}>
             At Eventis Technologies, you'll be at the forefront of the privacy-first analytics revolution. We're building technology 
-            that will define how businesses understand user behavior while respecting privacy rights. Join a team of world-class 
-            engineers, designers, and privacy experts who are passionate about creating technology that benefits both businesses and users.
+            that will define how businesses understand user behavior while respecting privacy rights. Join a focused team of privacy 
+            experts and sales engineers who are passionate about creating technology that benefits both businesses and users.
           </Typography>
 
           <Grid container spacing={4} sx={{ mb: 8 }}>
@@ -187,7 +171,7 @@ const Careers = () => {
                     <Button
                       variant="contained"
                       fullWidth
-                      href="mailto:team@oncabaret.com?subject=Application for Senior AI/ML Engineer"
+                      href={`mailto:team@oncabaret.com?subject=Application for ${job.title}`}
                       sx={{
                         backgroundColor: '#112a48',
                         '&:hover': {
