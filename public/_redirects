@@ -1,0 +1,6 @@
+# Ensure XML files are served with correct content-type
+/sitemap.xml /sitemap.xml 200
+/robots.txt /robots.txt 200
+
+# SPA routing - redirect all non-static file requests to index.html
+/* /index.html 200 
