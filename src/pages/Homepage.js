@@ -240,70 +240,83 @@ const Homepage = () => {
     },
     {
       title: 'Advanced Analytics',
-      description: 'ML + agentic ai',
+      description: 'ML + Agentic AI',
       icon: <InsightsIcon sx={{ color: '#112a48', fontSize: 40 }} />
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: 'Free',
-      period: 'forever',
-      description: 'Perfect for small apps and websites getting started',
+      name: 'Free',
+      price: '$0',
+      period: '/mo',
+      description: 'Ideal for startups & indie devs',
       features: [
         'Up to 25K events/month',
-        'Basic behavioral analytics',
-        'Standard integrations',
+        'Basic signal clustering & intent dashboard',
+        'Standard SDK + integration docs',
         'Community support',
-        '30-day data retention',
-        'Basic dashboard'
+        'Basic analytics dashboard'
       ],
-      cta: 'Start Free',
+      cta: 'Get Started',
       featured: false
     },
     {
-      name: 'Professional',
-      price: '$39',
-      period: '/month',
-      description: 'For growing businesses ready to scale',
+      name: 'Pro',
+      price: '$499',
+      period: '/mo',
+      yearlyPrice: '$5K',
+      yearlyPeriod: '/year',
+      description: 'Everything in Free, plus advanced features',
       features: [
-        'Up to 500K events/month',
-        'Advanced behavioral analysis',
-        'Custom audience segments',
-        'Priority email support',
-        '1-year data retention',
+        'Up to 1 million events/month',
+        'Advanced ML pipeline',
+        'Real-time segments & trend overlays',
+        'Email support & standard SLA',
+        'Access to usage-based ML API',
         'Custom dashboards',
-        'API access',
-        'Slack/Teams integration'
+        'API access'
       ],
-      cta: 'Start 14-day Trial',
+      cta: 'Start Pro',
       featured: true
     },
     {
       name: 'Enterprise',
       price: 'Custom',
-      period: 'pricing',
-      description: 'For large organizations with complex needs',
+      period: '(starting at $4K/mo)',
+      description: 'Everything in Pro, plus enterprise features',
       features: [
         'Unlimited events',
-        'White-label solution',
+        'Private cloud or on-prem deployment',
         'Dedicated account manager',
-        '24/7 phone support',
-        'Unlimited data retention',
-        'Custom integrations',
-        'SLA guarantees',
-        'On-premise deployment'
+        'Premium SLA, SOC2 compliance',
+        'Custom integrations: CDP, DSP, ad servers',
+        'Revenue share options for DOOH partners',
+        'White-label solution',
+        '24/7 premium support'
       ],
       cta: 'Contact Sales',
       featured: false
     }
   ];
 
+  const addOnOptions = [
+    {
+      name: 'Usage-Based ML API',
+      description: 'Pay-per-query or per-million events',
+      details: 'Real-time scoring for deeper personalization'
+    },
+    {
+      name: 'DOOH Revenue Share',
+      description: 'Proven CPM uplift? We split the win with retail partners',
+      details: 'Revenue sharing model for digital billboard partners'
+    }
+  ];
+
   const companyHighlights = [
     {
       title: 'AI-Powered Analytics',
-      description: 'The most advanced cross surface privacy safe layer using ML + agentic ai',
+      description: 'The most advanced cross surface privacy safe layer using ML + Agentic AI',
       icon: <AutoAwesomeIcon sx={{ color: '#112a48', fontSize: 40 }} />
     },
     {
@@ -333,7 +346,7 @@ const Homepage = () => {
           <Typography variant="h4" sx={{ mb: 6, opacity: 0.95, maxWidth: '900px', margin: '0 auto 48px auto' }}>
             Eventis Technologies revolutionizes behavioral analytics with our Anon SDK
           </Typography>
-          <Button variant="contained" size="large" sx={{ mr: 2, mb: 2 }}>
+          <Button variant="contained" size="large" sx={{ mr: 2, mb: 2 }} onClick={() => window.open('mailto:team@oncabaret.com', '_blank')}>
             Get Started
           </Button>
           <Button variant="outlined" size="large" sx={{ color: 'white', borderColor: 'white', mb: 2 }}>
@@ -485,7 +498,7 @@ const Homepage = () => {
           </Typography>
           
           <Typography variant="h5" sx={{ textAlign: 'center', mb: 8, color: '#6c757d', maxWidth: '800px', margin: '0 auto 64px auto' }}>
-            We create behavioral profiles that outperform industry standards by leveraging advanced ML + agentic AI to understand real-world intent patterns
+            We create behavioral profiles that outperform industry standards by leveraging advanced ML + Agentic AI to understand real-world intent patterns
           </Typography>
 
           <Grid container spacing={4}>
@@ -614,16 +627,16 @@ const Homepage = () => {
           <Typography variant="h2" component="h2" sx={{ textAlign: 'center', mb: 3, fontWeight: 700, color: '#2c3e50' }}>
             Simple, Transparent Pricing
           </Typography>
-          <Typography variant="h6" sx={{ textAlign: 'center', mb: 8, color: '#6c757d', maxWidth: '600px', margin: '0 auto 64px auto' }}>
-            Start free, scale as you grow. No hidden fees, no surprise charges. 
-            <strong style={{ color: '#112a48' }}> 20% cheaper than Amplitude</strong> with better privacy protection.
+          <Typography variant="h6" sx={{ textAlign: 'center', mb: 8, color: '#6c757d', maxWidth: '700px', margin: '0 auto 64px auto' }}>
+            Start free and scale as you grow. No hidden fees, transparent pricing. 
+            Choose the plan that <strong style={{ color: '#112a48' }}>fits your needs</strong> and budget.
           </Typography>
           
           <Grid container spacing={4} justifyContent="center">
             {pricingPlans.map((plan, index) => (
               <Grid item xs={12} md={4} key={index}>
                 <PricingCard featured={plan.featured}>
-                  <Typography variant="h4" sx={{ fontWeight: 700, mb: 1 }}>
+                  <Typography variant="h4" sx={{ fontWeight: 700, mb: 2 }}>
                     {plan.name}
                   </Typography>
                   <Box sx={{ mb: 3 }}>
@@ -633,6 +646,11 @@ const Homepage = () => {
                     <Typography variant="h6" component="span" sx={{ opacity: 0.8 }}>
                       {plan.period}
                     </Typography>
+                    {plan.yearlyPrice && (
+                      <Typography variant="body2" sx={{ opacity: 0.7, mt: 1, display: 'block' }}>
+                        or {plan.yearlyPrice}{plan.yearlyPeriod}
+                      </Typography>
+                    )}
                   </Box>
                   <Typography variant="body1" sx={{ mb: 4, opacity: 0.9, minHeight: '48px' }}>
                     {plan.description}
@@ -657,7 +675,7 @@ const Homepage = () => {
                     variant={plan.featured ? "outlined" : "contained"}
                     fullWidth
                     size="large"
-                    href={plan.cta === 'Contact Sales' ? 'mailto:sales@eventis.tech' : '#'}
+                    href={plan.cta === 'Contact Sales' ? 'mailto:team@oncabaret.com' : plan.cta === 'Get Started' ? 'mailto:team@oncabaret.com' : plan.cta === 'Start Pro' ? 'mailto:team@oncabaret.com' : '#'}
                     sx={{
                       borderRadius: '12px',
                       py: 2,
@@ -677,12 +695,48 @@ const Homepage = () => {
             ))}
           </Grid>
 
+          {/* Add-On Options */}
+          <Box sx={{ mt: 8, mb: 4 }}>
+            <Typography variant="h4" sx={{ textAlign: 'center', mb: 4, fontWeight: 600, color: '#2c3e50' }}>
+              Add-On Options
+            </Typography>
+            <Grid container spacing={3} justifyContent="center">
+              {addOnOptions.map((addon, index) => (
+                <Grid item xs={12} md={5} key={index}>
+                  <Card sx={{ 
+                    borderRadius: '16px', 
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', 
+                    border: '2px solid #e0e0e0',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      boxShadow: '0 8px 32px rgba(17, 42, 72, 0.15)',
+                      transform: 'translateY(-4px)'
+                    }
+                  }}>
+                    <CardContent sx={{ p: 4 }}>
+                      <Typography variant="h6" sx={{ fontWeight: 600, color: '#2c3e50', mb: 2 }}>
+                        {addon.name}
+                      </Typography>
+                      <Typography variant="body1" sx={{ color: '#6c757d', mb: 2, lineHeight: 1.6 }}>
+                        {addon.description}
+                      </Typography>
+                      <Typography variant="body2" sx={{ color: '#495057', fontStyle: 'italic' }}>
+                        {addon.details}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+
           <Box sx={{ mt: 8, textAlign: 'center', p: 4, backgroundColor: 'white', borderRadius: '16px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
             <Typography variant="h6" sx={{ mb: 2, fontWeight: 600, color: '#2c3e50' }}>
-              Volume Discounts Available
+              Multi-Platform Discounts Available
             </Typography>
             <Typography variant="body1" sx={{ color: '#6c757d' }}>
-              Processing over 1M events/month? Contact us for custom enterprise pricing with additional discounts.
+              Deploying across multiple surfaces? Bundle SDK licenses with ML API access for additional savings. 
+              DOOH partners enjoy exclusive revenue sharing opportunities.
             </Typography>
           </Box>
         </Container>
@@ -779,7 +833,7 @@ const Homepage = () => {
                 <Button 
                   variant="outlined" 
                   size="large"
-                  href="mailto:support@eventis.tech"
+                  href="mailto:team@oncabaret.com"
                   sx={{ 
                     borderRadius: '12px',
                     borderColor: '#112a48',
@@ -828,7 +882,7 @@ const Homepage = () => {
           <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
             <PrimaryButton 
               size="large" 
-              href="mailto:hello@eventis.tech"
+              href="mailto:team@oncabaret.com"
               sx={{ 
                 backgroundColor: 'white', 
                 color: '#112a48',
@@ -841,19 +895,19 @@ const Homepage = () => {
                 }
               }}
             >
-              Start Free Trial
+              Get Started
             </PrimaryButton>
             <SecondaryButton size="large" startIcon={<DownloadIcon />} href="https://github.com/oncabteam/anon" target="_blank" sx={{ fontSize: '18px', py: 2, px: 4 }}>
               Download SDK
             </SecondaryButton>
-            <SecondaryButton size="large" href="mailto:sales@eventis.tech" sx={{ fontSize: '18px', py: 2, px: 4 }}>
+            <SecondaryButton size="large" href="mailto:team@oncabaret.com" sx={{ fontSize: '18px', py: 2, px: 4 }}>
               Schedule Demo
             </SecondaryButton>
           </Box>
 
           <Box sx={{ mt: 8, display: 'flex', justifyContent: 'center', gap: 6, flexWrap: 'wrap', opacity: 0.8 }}>
-            <Typography variant="body2">✓ No credit card required</Typography>
-            <Typography variant="body2">✓ 14-day free trial</Typography>
+            <Typography variant="body2">✓ Flexible pricing models</Typography>
+            <Typography variant="body2">✓ Multi-platform support</Typography>
             <Typography variant="body2">✓ Setup in under 5 minutes</Typography>
           </Box>
         </Container>

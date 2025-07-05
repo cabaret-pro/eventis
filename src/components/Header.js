@@ -117,7 +117,7 @@ const Header = () => {
             <ListItemText primary={item.label} />
           </ListItem>
         ))}
-        <ListItem button onClick={() => window.open('mailto:hello@eventis.tech', '_blank')}>
+        <ListItem button onClick={() => window.open('mailto:team@oncabaret.com', '_blank')}>
           <ListItemText primary="Contact" />
         </ListItem>
       </List>
@@ -132,11 +132,6 @@ const Header = () => {
             {/* Logo and Company Info */}
             <Logo onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <img 
-                  src="/icon.png" 
-                  alt="Eventis Technologies Icon"
-                  style={{ height: '40px', width: 'auto' }}
-                />
                 <img 
                   src="/logo-text.png" 
                   alt="Eventis Technologies Logo"
@@ -159,7 +154,7 @@ const Header = () => {
                 ))}
                                  <Box sx={{ mx: 1 }}>
                    <CTAButton 
-                     onClick={() => window.open('mailto:hello@eventis.tech', '_blank')}
+                     onClick={() => window.open('mailto:team@oncabaret.com', '_blank')}
                    >
                      Get Started
                    </CTAButton>

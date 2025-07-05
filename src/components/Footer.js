@@ -10,9 +10,6 @@ import {
 } from '@mui/material';
 import {
   GitHub as GitHubIcon,
-  LinkedIn as LinkedInIcon,
-  Twitter as TwitterIcon,
-  Email as EmailIcon,
   LocationOn as LocationIcon,
 } from '@mui/icons-material';
 import { styled } from '@mui/system';
@@ -35,17 +32,7 @@ const FooterLink = styled(Link)(() => ({
   },
 }));
 
-const SocialIconButton = styled(IconButton)(() => ({
-  color: 'rgba(255, 255, 255, 0.8)',
-  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-  margin: '0 8px',
-  transition: 'all 0.3s ease',
-  '&:hover': {
-    backgroundColor: '#3a7580',
-    color: 'white',
-    transform: 'translateY(-2px)',
-  },
-}));
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -59,18 +46,10 @@ const Footer = () => {
             <Box sx={{ mb: 3 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                 <img 
-                  src="/icon.png" 
-                  alt="Eventis Technologies Icon"
-                  style={{ width: '30px', height: '30px' }}
-                />
-                <img 
-                  src="/logo.png" 
+                  src="/logo-text.png" 
                   alt="Eventis Technologies Logo"
-                  style={{ width: '36px', height: '36px' }}
+                  style={{ height: '40px', width: 'auto' }}
                 />
-                <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                  Eventis Technologies
-                </Typography>
               </Box>
               <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)', mb: 2, lineHeight: 1.6 }}>
                 Building privacy safe infrastructure for real world intent. 
@@ -86,7 +65,7 @@ const Footer = () => {
           </Grid>
 
           {/* Product Links */}
-          <Grid item xs={12} md={2}>
+          <Grid item xs={12} md={3}>
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Product
             </Typography>
@@ -104,7 +83,7 @@ const Footer = () => {
           </Grid>
 
           {/* Resources */}
-          <Grid item xs={12} md={2}>
+          <Grid item xs={12} md={3}>
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
               Resources
             </Typography>
@@ -133,50 +112,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          {/* Contact & Social */}
-          <Grid item xs={12} md={2}>
-            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
-              Connect
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mb: 3 }}>
-              <FooterLink href="mailto:hello@eventis.tech">
-                hello@eventis.tech
-              </FooterLink>
-              <FooterLink href="mailto:sales@eventis.tech">
-                sales@eventis.tech
-              </FooterLink>
-              <FooterLink href="mailto:support@eventis.tech">
-                support@eventis.tech
-              </FooterLink>
-            </Box>
-            
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-              <SocialIconButton 
-                aria-label="GitHub"
-                onClick={() => window.open('https://github.com/oncabteam/anon', '_blank')}
-              >
-                <GitHubIcon fontSize="small" />
-              </SocialIconButton>
-              <SocialIconButton 
-                aria-label="LinkedIn"
-                onClick={() => window.open('https://linkedin.com/company/eventis-technologies', '_blank')}
-              >
-                <LinkedInIcon fontSize="small" />
-              </SocialIconButton>
-              <SocialIconButton 
-                aria-label="Twitter"
-                onClick={() => window.open('https://twitter.com/eventistech', '_blank')}
-              >
-                <TwitterIcon fontSize="small" />
-              </SocialIconButton>
-              <SocialIconButton 
-                aria-label="Email"
-                onClick={() => window.open('mailto:hello@eventis.tech', '_blank')}
-              >
-                <EmailIcon fontSize="small" />
-              </SocialIconButton>
-            </Box>
-          </Grid>
+
         </Grid>
 
         <Divider sx={{ my: 4, backgroundColor: 'rgba(255, 255, 255, 0.2)' }} />
