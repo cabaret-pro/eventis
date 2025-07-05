@@ -1,0 +1,32 @@
+{
+  "short_name": "Eventis Tech",
+  "name": "Eventis Technologies - Privacy Safe Infrastructure",
+  "description": "Building privacy safe infrastructure for real world intent with our revolutionary Anon SDK",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#112a48",
+  "background_color": "#f8f9fa",
+  "orientation": "portrait-primary",
+  "categories": ["business", "technology", "analytics", "privacy"],
+  "lang": "en-US",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false
+} 
