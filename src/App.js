@@ -17,6 +17,7 @@ import FuturePrivacySafeAnalytics from './pages/blog/FuturePrivacySafeAnalytics'
 import EnterpriseAnalyticsMigration from './pages/blog/EnterpriseAnalyticsMigration';
 import RealTimeBehavioralSegmentation from './pages/blog/RealTimeBehavioralSegmentation';
 import CrossPlatformAnalytics from './pages/blog/CrossPlatformAnalytics';
+import CustomerDashboard from './pages/CustomerDashboard';
 
 function App() {
   return (
@@ -38,6 +39,12 @@ function App() {
           <Route path="/blog/enterprise-analytics-migration" element={<EnterpriseAnalyticsMigration />} />
           <Route path="/blog/real-time-behavioral-segmentation" element={<RealTimeBehavioralSegmentation />} />
           <Route path="/blog/cross-platform-analytics" element={<CrossPlatformAnalytics />} />
+          
+          {/* Customer Dashboard Routes */}
+          <Route path="/customer/:customerId" element={<CustomerDashboard />} />
+          <Route path="/customer/:customerId/analytics" element={<CustomerDashboard activeTab="analytics" />} />
+          <Route path="/customer/:customerId/ml-pipeline" element={<CustomerDashboard activeTab="ml-pipeline" />} />
+          <Route path="/customer/:customerId/agents" element={<CustomerDashboard activeTab="agents" />} />
         </Routes>
       </Box>
       <Footer />
